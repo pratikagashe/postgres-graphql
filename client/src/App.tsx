@@ -3,7 +3,7 @@ import logo from './logo.svg'
 import client from './ApolloClient'
 import { ApolloProvider } from '@apollo/react-hooks'
 import './App.css'
-import Users from './Users'
+import Users from './Components/Users'
 
 const App: React.FC = () => {
   return (

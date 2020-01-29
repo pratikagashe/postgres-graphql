@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
-import client from './ApolloClient'
+import React from 'react'
+import client from '../ApolloClient'
 import gql from 'graphql-tag'
 
 const Users: React.FC = () => {
   const getUsers = () => {
-    console.log('called')
     client
       .query({
         query: gql`
