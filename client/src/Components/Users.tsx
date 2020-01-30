@@ -1,36 +1,33 @@
-import React from 'react'
-import client from '../ApolloClient'
-import gql from 'graphql-tag'
+import React, { useState, useEffect } from 'react'
+import { useGetUsersQuery, User } from '../generated/graphql'
 
 const Users: React.FC = () => {
-  const getUsers = () => {
-    client
-      .query({
-        query: gql`
-          {
-            allUsers {
-              nodes {
-                email
-                id
-                name
-                createdAt
-              }
-            }
-          }
-        `,
-      })
-      .then(result => {
-        console.log(result)
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }
+  const [users, setUsers] = useState()
+  const { data, error, loading } = useGetUsersQuery()
+
+  useEffect(() => {
+    if (data) {
+      if (data && data.allUsers && data.allUsers.nodes) {
+        setUsers(data.allUsers.nodes)
+      }
+    }
+    if (error) {
+      console.log(error)
+    }
+    if (loading) {
+      console.log(loading)
+    }
+  }, [data, error, loading])
 
   return (
-    <h2>
-      Users <button onClick={getUsers}>Get users</button>
-    </h2>
+    <>
+      <h2>Hello users,</h2>
+      {users &&
+        users.length > 0 &&
+        users.map((user: User, index: number) => (
+          <p key={`user_${index}`}>{user.name}</p>
+        ))}
+    </>
   )
 }
 
