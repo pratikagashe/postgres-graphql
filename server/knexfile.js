@@ -1,13 +1,13 @@
 require('dotenv').config()
 
-const { CLIENT, DATABASE, USER, PASSWORD, HOST, PG_PORT } = process.env
+const { CLIENT, DATABASE, PG_USER, PASSWORD, HOST, PG_PORT } = process.env
 
 module.exports = {
     development: {
         client: CLIENT,
         connection: {
             database: DATABASE,
-            user: 'postgres',
+            user: PG_USER,
             password: PASSWORD,
             host: HOST,
             port: PG_PORT,
