@@ -1,11 +1,11 @@
 const { postgraphile } = require('postgraphile')
 
-const { DATABASE, PASSWORD, HOST, PG_PORT } = process.env
+const { DATABASE, PG_USER, PASSWORD, HOST, PG_PORT } = process.env
 
 module.exports = postgraphile(
     {
         database: DATABASE,
-        user: 'postgres',
+        user: PG_USER,
         password: PASSWORD,
         host: HOST,
         port: PG_PORT,
