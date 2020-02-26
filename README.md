@@ -13,7 +13,7 @@ Edit and save `sample.env` as `.env` and update config as per your requirements.
 
 Install postgreSQL and update configuration under following file `.env`
 
-Run following command to install requied packages:
+Run the following command in `server` to install requied packages:
 
 `npm install`
 
@@ -67,7 +67,12 @@ Here's the folder structute for queries and mutations.
 
 
 ## Run client:
-To get our server running run any of the following command:
+Run the following command in `client` to install requied packages:
+
+`yarn` or `npm install`
+
+
+To start our client run the following command:
 
 
 `yarn start`
