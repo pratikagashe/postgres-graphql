@@ -38,6 +38,7 @@ To update your table with static data/seeds run the following command:
 `npx knex seed:run`
 
 
+Note: Make sure you migrations scripts to build your schema on fresh repo clone, and then proceed to start your server. 
 
 ### Run Server:
 
