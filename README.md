@@ -9,9 +9,11 @@ Here's the details about technologies we will be using to build our architecture
 - Client: React+TypeScript, GraphQL, Apollo-Client
 - Schema handling: Knex Migrations.
 
-Edit and save `sample.env` as `.env` and update config as per your requirements.
+## Server
 
 Install postgreSQL and update configuration under following file `.env`
+
+Edit and save `sample.env` as `.env` and update config as per your requirements.
 
 Run the following command in `server` to install requied packages:
 
@@ -19,7 +21,7 @@ Run the following command in `server` to install requied packages:
 
 
 
-## For schema migrations:
+### For schema migrations:
 
 Here is the folder structure for that: 
 - Server
@@ -37,7 +39,7 @@ To update your table with static data/seeds run the following command:
 
 
 
-## Run Server:
+### Run Server:
 
 To get our server running run any of the following command:
 
@@ -48,7 +50,9 @@ To get our server running run any of the following command:
 Hit following URL `http://localhost:8080/graphql` to see generated graphql by `postgraphile`
 
 
-## GraphQL codegen:
+## Client
+
+### GraphQL codegen:
 To generate graphql querries and mutations hooks based run the following command:
 
 `yarn codegen`
@@ -66,7 +70,7 @@ Here's the folder structute for queries and mutations.
         
 
 
-## Run client:
+### Run client:
 Run the following command in `client` to install requied packages:
 
 `yarn` or `npm install`
