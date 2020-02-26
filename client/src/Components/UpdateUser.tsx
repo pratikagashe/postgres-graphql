@@ -6,7 +6,7 @@ interface updateUser {
     name: string
 }
 
-export default function UpdateUser(props: updateUser) {
+const UpdateUser = (props: updateUser) => {
     const [updateUserById] = useUpdateUserById()
     const { id, name } = props
     const [values, setValues] = useState({
@@ -75,3 +75,5 @@ export default function UpdateUser(props: updateUser) {
         </>
     )
 }
+
+export default UpdateUser

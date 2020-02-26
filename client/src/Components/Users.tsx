@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { useGetUsersQuery, User } from '../generated/graphql'
+import { useGetUsers } from '../utils/services'
+import { User } from '../generated/graphql'
 import UpdateUser from './UpdateUser'
 
 const Users: React.FC = () => {
     const [users, setUsers] = useState()
-    const { data, error, loading } = useGetUsersQuery()
+    const { data, error, loading } = useGetUsers()
     const [values, setValues] = useState({
         id: 0,
         name: '',
