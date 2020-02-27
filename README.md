@@ -1,6 +1,6 @@
 # Full-stack web app with PostGraphile and React
 
-This repo is for reference to blog post: Building Full-stack web app with PostGraphile and React
+This repo is for reference to blog post: [Building Full-stack web app with PostGraphile and React](https://medium.com/make-it-heady/part-1-building-full-stack-web-app-with-postgraphile-and-react-server-side-529e2f19e6f1)
 
 Here's the details about technologies we will be using to build our architecture.
 
